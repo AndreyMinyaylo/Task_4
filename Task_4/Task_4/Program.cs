@@ -17,6 +17,7 @@ namespace Task_4
 
         public static void result()
         {
+            
             var time = input();
             if((time < 9)||(time >= 18)&&(time <= 24))
             {
