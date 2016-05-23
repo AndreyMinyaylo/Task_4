@@ -28,7 +28,6 @@ namespace Task_4
                 Console.Write("I am at work");
             }
             Console.ReadKey();
-
         }
 
         public static void result()
