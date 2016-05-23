@@ -6,11 +6,33 @@ using System.Threading.Tasks;
 
 namespace Task_4
 {
-    class Program
+    class worktime
     {
-        static void Main(string[] args)
+        public static int input()
         {
-            Console.Write("Test repository");
+            Console.WriteLine("Enter how many time is now");
+            var time = Convert.ToInt32(Console.ReadLine());
+            return time;
+        }
+
+        public static void result()
+        {
+            var time = input();
+            if((time < 9)||(time >= 18)&&(time <= 24))
+            {
+                Console.WriteLine("I am relax");
+            }
+            else
+            {
+                Console.Write("I am at work");
+            }
+            Console.ReadKey();
+
+        }
+
+        public static void Main(string[] args)
+        {
+            result();
         }
     }
 }
