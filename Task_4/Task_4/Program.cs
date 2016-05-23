@@ -33,7 +33,7 @@ namespace Task_4
 
         public static void result()
         {
-            int currentTime = input();
+            int currentTime = input(); 
             processing(currentTime);
             
         }
