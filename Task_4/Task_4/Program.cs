@@ -15,11 +15,11 @@ namespace Task_4
             return time;
         }
 
-        public static void result()
+        public static void processing(int currentTime)
+
         {
-            
-            var time = input();
-            if((time < 9)||(time >= 18)&&(time <= 24))
+           
+            if((currentTime < 9)||(currentTime >= 18)&&(currentTime <= 24))
             {
                 Console.WriteLine("I am relax");
             }
@@ -29,6 +29,13 @@ namespace Task_4
             }
             Console.ReadKey();
 
+        }
+
+        public static void result()
+        {
+            int currentTime = input();
+            processing(currentTime);
+            
         }
 
         public static void Main(string[] args)
