@@ -36,10 +36,47 @@ namespace Task_4
             processing(currentTime);
             
         }
+        
+    }
 
+    class biggestNumber
+    {
+        public static int input()
+        {
+            Console.WriteLine("Enter number");
+            var time = Convert.ToInt32(Console.ReadLine());
+            return time;
+        }
+
+        public static void processing(int firstNumber, int secondNumber, int thirdNumber)
+        {
+            int max;
+            max = firstNumber;
+
+            if (secondNumber > max)
+            {
+                max = secondNumber;
+            }
+            if (thirdNumber > max)
+            {
+                max = thirdNumber;
+            }
+            Console.WriteLine("Biggest number is: " + max);
+            Console.ReadKey();
+        }
+
+        public static void consoleOut()
+        {
+            int firstNumber = input();
+            int secondNumber = input();
+            int thirdNumbert = input();
+            processing(firstNumber,secondNumber,thirdNumbert);
+        }
         public static void Main(string[] args)
         {
-            result();
+            worktime.result();
+            consoleOut();
         }
+
     }
 }
