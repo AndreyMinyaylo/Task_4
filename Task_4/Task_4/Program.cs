@@ -70,13 +70,48 @@ namespace Task_4
             int firstNumber = input();
             int secondNumber = input();
             int thirdNumbert = input();
-            processing(firstNumber,secondNumber,thirdNumbert);
+            processing(firstNumber, secondNumber, thirdNumbert);
         }
-        public static void Main(string[] args)
+    }
+
+    class twiceNumber
+    {
+        public static int input()
         {
-            worktime.result();
-            consoleOut();
+            Console.WriteLine("Enter number:");
+            var time = Convert.ToInt32(Console.ReadLine());
+            return time;
+        }
+        public static void number(int someNumber)
+        {
+            if ((someNumber > 0) && (someNumber%7 == 0))
+            {
+                Console.WriteLine("Number is: "+someNumber*2);
+            }
+            else
+            {
+                Console.WriteLine("Enter number is not divisible on 7");
+            }
+            Console.ReadKey();
+        }
+
+        public static void consoleOut()
+        {
+            int someNumber = input();
+            number(someNumber);
+        }
+    }
+
+
+    class writeConsole
+        {
+            public static void Main(string[] args)
+            {
+                worktime.result();
+                biggestNumber.consoleOut();
+                twiceNumber.consoleOut();
+            }
         }
 
     }
-}
+
