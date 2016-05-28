@@ -8,14 +8,14 @@ namespace Task_4
 {
     class worktime
     {
-        public static int input()
+        public  int input(string consoleMsg = "Enter numder")
         {
-            Console.WriteLine("Enter how many time is now");
+            Console.WriteLine(consoleMsg);
             var time = Convert.ToInt32(Console.ReadLine());
             return time;
         }
 
-        public static void processing(int currentTime)
+        public  void processing(int currentTime)
 
         {
            
@@ -30,7 +30,7 @@ namespace Task_4
             Console.ReadKey();
         }
 
-        public static void result()
+        public  void result()
         {
             int currentTime = input(); 
             processing(currentTime);
@@ -41,14 +41,14 @@ namespace Task_4
 
     class biggestNumber
     {
-        public static int input()
+        public  int input()
         {
             Console.WriteLine("Enter number");
             var time = Convert.ToInt32(Console.ReadLine());
             return time;
         }
 
-        public static void processing(int firstNumber, int secondNumber, int thirdNumber)
+        public  void processing(int firstNumber, int secondNumber, int thirdNumber)
         {
             int max;
             max = firstNumber;
@@ -65,7 +65,7 @@ namespace Task_4
             Console.ReadKey();
         }
 
-        public static void consoleOut()
+        public  void consoleOut()
         {
             int firstNumber = input();
             int secondNumber = input();
@@ -76,13 +76,13 @@ namespace Task_4
 
     class twiceNumber
     {
-        public static int input()
+        public  int input()
         {
             Console.WriteLine("Enter number:");
             var number = Convert.ToInt32(Console.ReadLine());
             return number;
         }
-        public static void number(int someNumber)
+        public  void number(int someNumber)
         {
             if ((someNumber > 0) && (someNumber%7 == 0))
             {
@@ -95,7 +95,7 @@ namespace Task_4
             Console.ReadKey();
         }
 
-        public static void consoleOut()
+        public  void consoleOut()
         {
             int someNumber = input();
             number(someNumber);
@@ -104,14 +104,14 @@ namespace Task_4
 
     class consoleNumber
     {
-        public static float input()
+        public  float input()
         {
             Console.WriteLine("Enter float number:");
             var number = Convert.ToSingle(Console.ReadLine());
             return number;
         }
 
-        public static void numberFloat(float someNumber)
+        public  void numberFloat(float someNumber)
         {
             if ((someNumber >= 0)&&(someNumber <= 1))
             {
@@ -124,7 +124,7 @@ namespace Task_4
             Console.ReadKey();
         }
 
-        public static void consoleOut()
+        public  void consoleOut()
         {
             float someNumber = input();
             numberFloat(someNumber);
@@ -134,14 +134,14 @@ namespace Task_4
 
     class twoNumbers
     {
-        public static int input()
+        public  int input()
         {
             Console.WriteLine("Enter number:");
             var number = Convert.ToInt32(Console.ReadLine());
             return number;
         }
 
-        public static void workWithNumber(int firstNumber, int secondNumber)
+        public  void workWithNumber(int firstNumber, int secondNumber)
         {
             int max = firstNumber;
        
@@ -158,7 +158,7 @@ namespace Task_4
 
 
 
-        public static void consoleOut()
+        public  void consoleOut()
         {
             int firstNumber = input();
             int secondNumber = input();
@@ -168,7 +168,7 @@ namespace Task_4
 
     class  task_4_6
     {
-        public static void resultWork(int firstNumber, int secondNumber)
+        public  void resultWork(int firstNumber, int secondNumber)
         {
             int someNumber = firstNumber + secondNumber;
             if ((someNumber >= 11) && (someNumber <= 19))
@@ -181,57 +181,128 @@ namespace Task_4
             }
             Console.ReadKey();
         }
-        public static void consoleOut()
+        public  void consoleOut()
         {
-            int firstNumber = twoNumbers.input();
-            int secondNumber = twoNumbers.input();
-            resultWork(firstNumber,secondNumber);
+            //int firstNumber = twoNumbers.input();
+            //int secondNumber = twoNumbers.input();
+           // resultWork(firstNumber,secondNumber);
 
         }
     }
 
-   /* class task_4_7
+    class task_4_7
     {
-        public static bool resultWork(int firstNumber, int secondNumber)
+        public  bool resultWork(float firstNumber, float secondNumber)
         {   
-            bool someNumber = true;
+            bool someNumber = true; 
             if ((firstNumber%secondNumber != 0) || (secondNumber%firstNumber != 0))
             {
                 return false;
             }
-            
-            return someNumber;
-            //Console.WriteLine("the number of divided without a remainder: " + );
-        }
-
-        public static void console(bool someNumber, int firstNumber, int secondNumber)
-        {
-            if (someNumber == true)
+            else
             {
-                
+                return true;
             }
         }
 
-        public static void consoleOut()
+        public  void console(bool someNumber, float firstNumber, float secondNumber)
         {
-            int firstNumber = twoNumbers.input();
-            int secondNumber = twoNumbers.input();
-            resultWork(firstNumber, secondNumber);
+            
+            if (someNumber == true)
+            {
+                float result;
+                if (firstNumber%secondNumber == 0) 
+                {
+                    result = firstNumber/secondNumber;
+                    Console.WriteLine("the number of divided without a remainder: " + Math.Round(result,3));
+                }
+                if (secondNumber%firstNumber == 0)
+                {
+                    result = secondNumber/firstNumber;
+                    Console.WriteLine("the number of divided without a remainder: " + Math.Round(result, 3));
+                }
+             else
+                {
+                    result = firstNumber / secondNumber;
+                    Console.WriteLine("the number of divided with a remainder: " + Math.Round(result, 3));
+                    float result1 = secondNumber/firstNumber;
+                    Console.WriteLine("the number of divided with a remainder: " + Math.Round(result1, 3));
+                }
+                
+            }
+            Console.ReadKey();
+        }
+
+        public  void consoleOut()
+        {
+            
+            //float firstNumber = twoNumbers.input();
+            //float secondNumber = twoNumbers.input();
+            //bool someNumber = resultWork(firstNumber, secondNumber);
+            //console(someNumber, firstNumber, secondNumber);
 
         }
-    }*/
+    }
 
-
-    class writeConsole
+    class Task_4_8
+    {
+        public bool isLastEqual(int firstNumber, int secondNumber)
         {
-            public static void Main(string[] args)
+            var a = (firstNumber%10);
+            var b = (secondNumber%10);
+            return a == b;
+        }
+    }
+
+
+    class MyTestClass
+        {
+        public static int input(string consoleMsg = "Enter numder")
+        {
+            Console.WriteLine(consoleMsg);
+            var time = Convert.ToInt32(Console.ReadLine());
+            return time;
+        }
+
+        public static void test_4_8()
+        {
+            Task_4_8 testObject = new Task_4_8();
+            //var a = input("Enter firstNumber");
+            var a = input();
+            var b = input("Enter secondNumber");
+            var result = testObject.isLastEqual(a, b);
+            Console.WriteLine("Result: " + result);
+            Console.ReadKey();
+        }
+
+        //Static methods only here!!!!!
+        public static void Main(string[] args)
             {
-                worktime.result();
-                biggestNumber.consoleOut();
+            test_4_8();
+
+
+            /*
+                int time = worktime.input();
+            worktime.processing(time);
+
+
+            worktime.processing(134);
+                int[] imputtime = {-1, 1, 2, 3, 4, 5, 6, 12, 18, 23, 24, 25};
+
+                for (int i = 0; i < imputtime.Length; i++)
+                {
+                        worktime.processing(imputtime[i]);
+            }
+                int timew = worktime.input();
+                int teimt42 = worktime.input("castom msg");
+            worktime.result();
+
+            biggestNumber.consoleOut();
                 twiceNumber.consoleOut();
                 consoleNumber.consoleOut();
                 twoNumbers.consoleOut();
                 task_4_6.consoleOut();
+                task_4_7.consoleOut();*/
             }
         }
 
