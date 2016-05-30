@@ -1,12 +1,23 @@
 ﻿using System;
 
-public class Class1
+public class MyClass
 {
-	public Class1()
-	{
+    public static void convertToBin(int number)
+    {
+        if (number == 1)
+        {
+            Console.Write(number);
+            return;
+        }
+        
+        convertToBin(number/2);
+        
+        
+    }
 
-        public static void Main()
-	    {
-	    }
+
+    public static void Main()
+    {
+        convertToBin(13);
+    }
 	}
-}
